@@ -1,48 +1,57 @@
 {% extends "base.html"%}{% block title %}Sign-up{% endblock %}
 {% block content %}
-<form method="POST">
-  <h3 align="center">Sign Up</h3>
-  <div class="form-group">
-    <label for="email">Email Address</label>
-    <input
+
+<div class="container-login100">
+<div class="wrap-login100">
+  <img src="logo.png">
+<form class="login100-form validate-form" method="POST">
+
+<div class="wrap-input100 validate-input" >
+  <input
       type="email"
-      class="form-control"
+      class="input100"
       id="email"
       name="email"
       placeholder="Enter email"
     />
-  </div>
-  <div class="form-group">
-    <label for="firstName">First Name</label>
-    <input
+</div>
+  <div class="wrap-input100 validate-input" >
+  <input
       type="text"
-      class="form-control"
+      class="input100"
       id="firstName"
       name="firstName"
       placeholder="Enter first name"
     />
   </div>
-  <div class="form-group">
-    <label for="password1">Password</label>
-    <input
+  <div class="wrap-input100 validate-input" >
+  <input
       type="password"
-      class="form-control"
+      class="input100"
       id="password1"
       name="password1"
       placeholder="Enter password"
     />
-  </div>
-  <div class="form-group">
-    <label for="password2">Password (Confirm)</label>
-    <input
+</div>
+<div class="wrap-input100 validate-input" >
+   <input
       type="password"
-      class="form-control"
+      class="input100"
       id="password2"
       name="password2"
-      placeholder="Confirm password"
+      placeholder="Enter password"
     />
-  </div>
-  <br />
-  <button type="submit" class="btn btn-primary">Submit</button>
+
+</div>
+<div class="container-login100-form-btn">
+<div class="wrap-login100-form-btn">
+<div class="login100-form-bgbtn"></div>
+<button class="login100-form-btn">
+Submit
+</button>
+</div>
+</div>
 </form>
+</div>
+</div>
 {% endblock %}
