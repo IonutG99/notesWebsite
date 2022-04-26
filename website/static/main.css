@@ -40,6 +40,11 @@
 body, html {
 	height: 100%;
 	font-family: Poppins-Regular, sans-serif;
+	background: url(/static/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 /*---------------------------------------------*/
@@ -406,8 +411,18 @@ iframe {
 .wrap-login100-form-btn:hover .login100-form-bgbtn {
   left: 0;
 }
-
-
+/*------------------------------------------------------------------*/
+sticky{
+  position: absolute;
+  display: block;
+  top: 25%;
+  left: -75%;
+  width: 170px;
+  height: 150px;
+  background: white;
+  border-bottom: solid 30px #EE2C4A;
+  z-index: 1;
+}
 /*------------------------------------------------------------------
 [ Responsive ]*/
 

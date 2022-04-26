@@ -1,21 +1,35 @@
 {% extends "base.html"%}{% block title %}Home{% endblock %}
 {% block content %}
-<img src="logo.png" height="200" width="300">
+  <center>
+        <img id="logo" src="{{url_for('static', filename='logo.png')}}" heigh="150" width="200" ><br>
+    </center>
+
 <ul class="list-group list-group-flush" id="notes">
     {% for note in user.notes %}
-    <li class="list-group-item">{{ note.data}}
+    </br>
+    <li class="list-group-item"><b>{{note.title}}</b>
+        </br>{{ note.data}}
         <button type="button" class="close" onclick="deleteNote({{note.id}})">
             <span aria-hidden="true"> &times; </span>
         </button>
     </li>
     {% endfor %}
 </ul>
+</br>
 <form method="POST">
-    <textarea name="note" id="note" class="form-control">
+     <input
+      type="text"
+      class="form-control"
+      id="title"
+      name="title"
+      placeholder="Enter title"
+    />
+    </br>
+    <textarea name="note" id="note" class="form-control" placeholder="Enter note">
     </textarea>
     </br>
     <div align="center">
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" class="btn btn-light">
             Add Note
         </button>
     </div>
